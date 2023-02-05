@@ -1,3 +1,7 @@
-##  Run tests
+### Install dependencies
 
-npx playwright test
+___npm i___
+
+### Run tests
+
+___npx playwright test___
