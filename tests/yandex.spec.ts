@@ -1,14 +1,15 @@
-import {expect, test} from '@playwright/test';
-import {VideoSearchPage} from "./pages/VideoSearchPage";
+import {expect, test} from './fixture/yandexVideo';
 
-test('found video has trailer ', async ({ page }) => {
+
+
+test('found video has trailer', async ({ videoSearchPage}) => {
   const searchWord = "ураган"
-  const videoSearchPage = new VideoSearchPage(page);
 
-  await videoSearchPage.goto()
-  await videoSearchPage.enterSearchWord(searchWord)
-  await videoSearchPage.hooverPosterInResultsSearch(0)
+  await videoSearchPage.searchVideo(searchWord)
+  await videoSearchPage.takeScreenshotVideo(0, "yandex", "firstVideo")
+  await videoSearchPage.hoverPosterInResultsSearch(0);
 
+  await expect(videoSearchPage.getListSearchItems.nth(0)).not.toHaveScreenshot(`firstVideo.png`);
   expect(await videoSearchPage.trailerIsVisible(0)).toBeTruthy();
 });
 
