@@ -5,16 +5,13 @@ export class VideoSearchPage {
     readonly page: Page;
     readonly getSearchInput: Locator;
     readonly getListSearchItems: Locator;
-    // readonly getListSearchImage: Locator;
     readonly getTrailerHover: string;
 
 
     constructor(page: Page) {
         this.page = page;
         this.getSearchInput = page.locator('input[name="text"]');
-        // this.getListSearchItems = page.locator('(//div[@class="serp-list__items"]/div)');
         this.getListSearchItems = page.locator('div[class="serp-list__items"]>div');
-        // this.getListSearchImage= page.locator('div[class="serp-list__items"]>div');
         this.getTrailerHover = 'div[class*="thumb-image_hovered"]';
     }
 
