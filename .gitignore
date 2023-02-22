@@ -4,3 +4,4 @@ node_modules/
 /playwright/.cache/
 .idea
 /package-lock.json
+/cypress/videos/
