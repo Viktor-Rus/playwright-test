@@ -2,7 +2,7 @@ name: e2e
 on:
   workflow_dispatch:
   schedule:
-    - cron: '53 21 * * *'
+    - cron: '56 18 * * *'
 
 jobs:
   test:
