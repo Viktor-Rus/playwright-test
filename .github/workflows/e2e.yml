@@ -1,0 +1,8 @@
+name: e2e
+on: workflow_dispatch
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print to console
+        run: echo Hello e2e
