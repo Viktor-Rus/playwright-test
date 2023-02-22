@@ -7,6 +7,13 @@ jobs:
       - name: Get repository code
         uses: actions/checkout@v3
       - name: Install dependecies
-        run: npm ci
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
       - name: Test application
         run: npm run test:e2e
