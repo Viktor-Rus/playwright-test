@@ -1,8 +1,11 @@
 name: e2e
 on: workflow_dispatch
 jobs:
-  print:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print to console
-        run: echo Hello e2e
+  runs-on: ubuntu-latest
+  steps:
+    - name: Get repository code
+      uses: actions/checkout@v3
+    - name: Install dependecies
+      run: npm ci
+    - name: Test application
+      run: npm run test:e2e
