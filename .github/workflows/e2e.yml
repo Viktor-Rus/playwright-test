@@ -1,9 +1,7 @@
 name: e2e
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 19 * * *'
-
+    - cron: '2 19 * * *'
 jobs:
   test:
     runs-on: ubuntu-latest
