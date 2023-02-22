@@ -1,7 +1,7 @@
 name: e2e
 on:
   schedule:
-    - cron: '2 19 * * *'
+    - cron: '04 22 * * *'
 jobs:
   test:
     runs-on: ubuntu-latest
