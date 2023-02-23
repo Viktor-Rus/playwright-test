@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Get repository code
         uses: actions/checkout@v3
-        with:
-          ref: feature/version_2
+#        with:
+#          ref: feature/version_2
       - name: Install dependecies
 #        run: npm ci
         run: |
