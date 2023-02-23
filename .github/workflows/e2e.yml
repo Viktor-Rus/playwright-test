@@ -14,13 +14,5 @@ jobs:
           ref: feature/version_2
       - name: Install dependecies
         run: npm i
-#        run: |
-#          if [ -e yarn.lock ]; then
-#          yarn install --frozen-lockfile
-#          elif [ -e package-lock.json ]; then
-#          npm ci
-#          else
-#          npm i
-#          fi
       - name: Test application
         run: npm run test:e2e
