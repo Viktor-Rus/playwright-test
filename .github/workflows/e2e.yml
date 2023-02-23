@@ -1,10 +1,8 @@
 name: e2e
 on:
-  schedule:
-    branches:
-        - 'master'
-    - cron: '0 3 * * *'
   workflow_dispatch:
+    branches:
+      - master
 
 jobs:
   test:
