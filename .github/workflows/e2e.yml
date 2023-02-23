@@ -2,7 +2,7 @@ name: e2e
 on:
   workflow_dispatch:
   schedule:
-    - cron: '10 19 * * *'
+    - cron: '0 3 * * *'
     branches:
       - 'master'
 jobs:
