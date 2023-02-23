@@ -2,7 +2,7 @@ name: e2e
 on:
   workflow_dispatch:
   schedule:
-    - cron: '35 3 * * *'
+    - cron: '45 3 * * *'
 
 jobs:
   test:
@@ -11,7 +11,7 @@ jobs:
       - name: Get repository code
         uses: actions/checkout@v3
         with:
-          ref: master
+          ref: feature/version_2
       - name: Install dependecies
         run: |
           if [ -e yarn.lock ]; then
