@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Get repository code
         uses: actions/checkout@v3
+        with:
+          ref: master
       - name: Install dependecies
         run: |
           if [ -e yarn.lock ]; then
