@@ -1,5 +1,6 @@
 name: e2e
 on:
+  workflow_dispatch:
   schedule:
     - cron: '35 3 * * *'
 
