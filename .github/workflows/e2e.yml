@@ -1,0 +1,25 @@
+name: e2e
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 3 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repository code
+        uses: actions/checkout@v3
+#        with:
+#          ref: feature/version_2
+      - name: Install dependecies
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+      - name: Test application
+        run: npm run test:e2e

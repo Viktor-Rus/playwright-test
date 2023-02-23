@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:e2e": "cypress run --browser chrome"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.30.0"
+    "@playwright/test": "^1.30.0",
+    "cypress": "^12.6.0",
+    "cypress-xpath": "^2.0.1"
   }
 }
