@@ -1,7 +1,10 @@
 name: e2e
 on:
+  workflow_dispatch:
   schedule:
     - cron: '10 19 * * *'
+    branches:
+      - 'master'
 jobs:
   test:
     runs-on: ubuntu-latest
