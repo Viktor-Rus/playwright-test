@@ -13,7 +13,7 @@ jobs:
         with:
           ref: feature/version_2
       - name: Install dependecies
-        run: npm i
+        run: npm ci
 #        run: |
 #          if [ -e yarn.lock ]; then
 #          yarn install --frozen-lockfile
